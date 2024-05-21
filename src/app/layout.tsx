@@ -13,10 +13,12 @@ const lora = Lora({
   weight: "variable",
   style: ["normal", "italic"],
   variable: "--font-lora",
+  subsets: ["latin-ext"],
 });
 const quattrocento = Quattrocento({
   weight: ["400", "700"],
   variable: "--font-quattrocento",
+  subsets: ["latin-ext"],
 });
 
 function MainBody({ children }: { children: React.ReactNode }) {
