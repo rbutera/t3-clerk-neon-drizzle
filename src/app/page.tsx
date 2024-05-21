@@ -28,6 +28,14 @@ export default async function HomePage() {
           </div>
         ))}
       </div>
+      <div>
+        <h2 className="font-serif text-3xl sm:text-[3rem]">Posts</h2>
+        <ul className="font-sm ">
+          {posts.map((post) => (
+            <li key={post.id}>{post.name}</li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
