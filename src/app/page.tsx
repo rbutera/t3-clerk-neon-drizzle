@@ -16,9 +16,9 @@ export default function HomePage() {
       <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
         Gallery
       </h1>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap gap-4">
         {mockImages.map((image) => (
-          <div key={image.id} className="w-1/2 p-2">
+          <div key={image.id} className="w-48">
             <img
               src={image.url}
               alt={`Image ${image.id}`}
