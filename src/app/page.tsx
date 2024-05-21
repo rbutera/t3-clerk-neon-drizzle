@@ -12,26 +12,21 @@ const mockImages = mockUrls.map((url, index) => ({
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-          Gallery
-        </h1>
-        <div className="flex flex-wrap">
-          {mockImages.map((image) => (
-            <div
-              key={image.id}
-              className="w-1/2 p-2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6"
-            >
-              <img
-                src={image.url}
-                alt={`Image ${image.id}`}
-                className="h-auto w-full rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
+    <>
+      <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
+        Gallery
+      </h1>
+      <div className="flex flex-wrap">
+        {mockImages.map((image) => (
+          <div key={image.id} className="w-1/2 p-2">
+            <img
+              src={image.url}
+              alt={`Image ${image.id}`}
+              className="h-auto w-full rounded-lg"
+            />
+          </div>
+        ))}
       </div>
-    </main>
+    </>
   );
 }
