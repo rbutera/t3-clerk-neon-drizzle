@@ -1,3 +1,5 @@
+import { db } from "~/server/db";
+
 const mockUrls = [
   "https://utfs.io/f/192a0280-3a37-4bbb-80d8-3adca00c8ce2-zaz7iu.png",
   "https://utfs.io/f/1a543cbb-620d-43f5-8a29-517e55189f5a-1n164m.jpg",
@@ -10,7 +12,8 @@ const mockImages = mockUrls.map((url, index) => ({
   url,
 }));
 
-export default function HomePage() {
+export default async function HomePage() {
+  const posts = await db.query.posts.findMany();
   return (
     <>
       <h1 className="font-serif text-5xl sm:text-[5rem]">Gallery</h1>
