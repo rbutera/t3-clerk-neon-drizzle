@@ -13,9 +13,7 @@ const mockImages = mockUrls.map((url, index) => ({
 export default function HomePage() {
   return (
     <>
-      <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-        Gallery
-      </h1>
+      <h1 className="font-serif text-5xl sm:text-[5rem]">Gallery</h1>
       <div className="flex flex-wrap gap-4">
         {mockImages.map((image) => (
           <div key={image.id} className="w-48">
