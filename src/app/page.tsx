@@ -1,7 +1,9 @@
 import { db } from "~/server/db";
 
 export default async function HomePage() {
-  const images = await db.query.images.findMany();
+  const images = await db.query.images.findMany({
+    orderBy: (model, { desc }) => desc(model.id),
+  });
   return (
     <section className="flex flex-col gap-4">
       <h1 className="font-serif text-5xl sm:text-[5rem]">Gallery</h1>
